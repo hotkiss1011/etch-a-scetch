@@ -1,13 +1,13 @@
 //query selectors
 let body = document.querySelector('body');
 let sketchArea = document.querySelector('.sketch-area');
+sketchArea.setAttribute('style', 'display: flex; flex-direction: column; border-radius: 15px;');
 let colorBtn = document.querySelector('.color-btn');
 let color = document.querySelector('#color');
 
-sketchArea.setAttribute('style', 'display: flex; flex-direction: column; border-radius: 15px;')
-
+//set color
 let colorInput = color.value;
-colorBtn.setAttribute('style', `background-color: ${colorInput}`)
+colorBtn.setAttribute('style', `background-color: ${colorInput}`);
 
 colorBtn.addEventListener('click', function() {
     color.click();
@@ -15,6 +15,7 @@ colorBtn.addEventListener('click', function() {
 
 color.addEventListener('change', function() {
     colorInput = color.value;
+    colorBtn.setAttribute('style', `background-color: ${colorInput}`);
 })
 
 
