@@ -4,6 +4,8 @@ let sketchArea = document.querySelector('.sketch-area');
 sketchArea.setAttribute('style', 'display: flex; flex-direction: column; border-radius: 15px;');
 let colorBtn = document.querySelector('.color-btn');
 let color = document.querySelector('#color');
+let eraser = document.querySelector('.eraser');
+let clear = document.querySelector('.clear');
 
 //set start color
 let colorInput = color.value;
@@ -21,6 +23,11 @@ color.addEventListener('change', function() {
     return colorInput;
 })
 
+//on click of eraser, turns color to white
+eraser.addEventListener('click', function() {
+    colorInput = '#ffffff';
+});
+
 //set number of row/columns - may change this later
 let n = 16;
 
@@ -37,8 +44,16 @@ function makeGrid(n) {
             let square = document.createElement('div');
             square.classList.add(`square`);
             square.setAttribute('style', 'border: 1px #e2e2e2 solid; width: 25px; height: 25px;');
+            square.addEventListener('mouseover', function() {
+                square.style.backgroundColor = colorInput;
+            })
             
             row.appendChild(square);
+
+            //clears all squares on click of clear button
+            clear.addEventListener('click', function() {
+                square.style.backgroundColor = "#ffffff";
+            })
         }
         sketchArea.appendChild(row);
     }
