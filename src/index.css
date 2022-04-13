@@ -46,3 +46,9 @@ button {
     border: none;
     box-shadow: inset -3px -2px 1px rgba(0, 0, 0, 0.315), -3px -2px 1px rgba(0, 0, 0, 0.315);
 }
+
+.rgb-btn {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+    font-weight: bolder;
+    font-size: large;
+}
