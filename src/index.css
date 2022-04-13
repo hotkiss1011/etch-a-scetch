@@ -8,7 +8,7 @@ body {
     background-color: #ac0303;
     border-radius: 15px;
     padding:20px;
-    box-shadow: inset -8px -8px rgba(0, 0, 0, 0.315), -4px -4px rgba(0, 0, 0, 0.315);
+    box-shadow: inset -8px -8px 5px rgba(0, 0, 0, 0.315), -8px -8px 5px rgba(0, 0, 0, 0.315);
 }
 
 .sketch-area {
@@ -40,6 +40,6 @@ button {
     height: 50px;
     width: 50px;
     border: none;
-    box-shadow: inset -3px -2px rgba(0, 0, 0, 0.315);
+    box-shadow: inset -3px -2px 1px rgba(0, 0, 0, 0.315), -3px -2px 1px rgba(0, 0, 0, 0.315);
 }
 
