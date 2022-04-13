@@ -1,4 +1,4 @@
-# etch-a-scetch
+# etch-a-sketch
 
 ## Skills Demonstrated
  - HTML
