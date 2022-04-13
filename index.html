@@ -10,12 +10,20 @@
 <body>
     <h1>Amanda's Etch-a-Sketch Game</h1>
     <div class="container">
-        <div class="sidebar">
-            <input type="color" name="color" id="color">
-            <button class="eraser">Erase</button>
-            <button type="reset" class="clear">Clear</button>
-        </div>
         <div class="sketch-area"></div>
+        <ul class="game-options">
+            <li>
+                <button class="color-btn">
+                    <input type="color" name="color" value="#000000" id="color">
+                </button>
+            </li>
+            <li>
+                <button class="eraser">Erase</button>
+            </li>
+            <li>
+                <button type="reset" class="clear">Clear</button>
+            </li>
+        </ul>
     </div>
     
     <script src="src/index.js"></script>

@@ -1,5 +1,20 @@
+let body = document.querySelector('body');
 let sketchArea = document.querySelector('.sketch-area');
-sketchArea.setAttribute('style', 'display: flex; flex-direction: column;')
+sketchArea.setAttribute('style', 'display: flex; flex-direction: column; border: 50px #bf0303 solid; border-radius: 15px;')
+
+let colorBtn = document.querySelector('.color-btn');
+let color = document.querySelector('#color');
+let colorInput = color.value;
+
+colorBtn.addEventListener('click', function() {
+    color.click();
+});
+
+color.addEventListener('click', function() {
+    colorInput = color.value;
+    console.log(colorInput);
+})
+
 
 let n = 16;
 
@@ -12,7 +27,7 @@ function makeGrid(n) {
         for (let i=0; i < n; i++) {
             let square = document.createElement('div');
             square.classList.add(`square`);
-            square.setAttribute('style', 'border: 1px grey solid; width: 25px; height: 25px;');
+            square.setAttribute('style', 'border: 1px #e2e2e2 solid; width: 25px; height: 25px;');
             
             row.appendChild(square);
         }
