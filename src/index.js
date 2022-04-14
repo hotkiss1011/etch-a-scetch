@@ -6,6 +6,8 @@ let colorBtn = document.querySelector('.color-btn');
 let color = document.querySelector('#color');
 let eraser = document.querySelector('.eraser');
 let clear = document.querySelector('.clear');
+let rows = document.querySelector('#rows');
+let update = document.querySelector('.submit');
 
 //set start color
 let colorInput = color.value;
@@ -28,7 +30,7 @@ eraser.addEventListener('click', function() {
     colorInput = '#ffffff';
 });
 
-//set number of row/columns - may change this later
+//set number of row/columns
 let n = 16;
 
 //makes grid that is n squares wide and n squares tall
@@ -57,6 +59,13 @@ function makeGrid(n) {
         }
         sketchArea.appendChild(row);
     }
+    update.addEventListener('click', function() {
+        if (rows.value > 0 && rows.value < 100) {
+            n = rows.value;
+            sketchArea.innerHTML = '';
+            makeGrid(n);
+        }
+    });
 }
 
 //creates grid on load

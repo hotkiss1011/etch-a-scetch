@@ -5,12 +5,19 @@ body {
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
-    height: 100vh;
+}
+.header {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
     background-color: #ac0303;
     border-radius: 15px;
+    margin: 50px;
     padding:20px;
     box-shadow: inset -8px 8px 5px rgba(255, 255, 255, 0.315), 5px -5px #b95050, -30px -20px 20px rgba(0, 0, 0, 0.445), inset 5px -5px 5px rgba(0, 0, 0, 0.445);
 }
@@ -57,4 +64,12 @@ button:active {
     background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
     font-weight: bolder;
     font-size: large;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    width: 300px;
 }
