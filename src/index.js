@@ -8,6 +8,10 @@ let eraser = document.querySelector('.eraser');
 let clear = document.querySelector('.clear');
 let rows = document.querySelector('#rows');
 let update = document.querySelector('.submit');
+let rgbBtn = document.querySelector('.rgb-btn');
+rgbBtn.addEventListener('click', function (){
+    alert("Sorry! This feature isn't working just yet. Be sure to check back soon!")
+});
 
 //set start color
 let colorInput = color.value;
