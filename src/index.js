@@ -36,9 +36,18 @@ eraser.addEventListener('click', function() {
 
 //set number of row/columns
 let n = 16;
+let height = 500;
+let width = 500;
+
+function updateRows() {
+    n = rows.value;
+    sketchArea.innerHTML = '';
+    makeGrid(n);
+}
 
 //makes grid that is n squares wide and n squares tall
 function makeGrid(n) {
+    update.addEventListener('click', updateRows);
     //this makes each of the rows
     for (let j=0; j < n; j++) {
         let row = document.createElement('div');
@@ -49,11 +58,7 @@ function makeGrid(n) {
         for (let i=0; i < n; i++) {
             let square = document.createElement('div');
             square.classList.add(`square`);
-            if (n < 45) {
-                square.setAttribute('style', 'border: 1px #e2e2e2 solid; width: 25px; height: 25px;');
-            } else {
-                square.setAttribute('style', 'border: 1px #e2e2e2 solid; width: 7px; height: 7px;');
-            }
+            square.setAttribute('style', `border: 1px #e2e2e2 solid; width: ${Math.round(width/n)}px; height: ${Math.round(height/n)}px;`);
             square.addEventListener('mouseover', function() {
                 square.style.backgroundColor = colorInput;
             })
@@ -67,17 +72,6 @@ function makeGrid(n) {
         }
         sketchArea.appendChild(row);
     }
-    update.addEventListener('click', function() {
-        if (rows.value > 0 && rows.value < 45) {
-            n = rows.value;
-            sketchArea.innerHTML = '';
-            makeGrid(n);
-        } else if (rows.value >= 45 && rows.value < 100) {
-            n = rows.value;
-            sketchArea.innerHTML = '';
-            makeGrid(n);
-        }
-    });
 }
 
 //creates grid on load
